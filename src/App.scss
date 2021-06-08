@@ -119,7 +119,7 @@ input {
         cursor: pointer;
 
         &:hover {
-          animation: shakeMargin 400ms ease 1, shakePadding 400ms ease 100ms 1;
+          animation: shakeMargin 350ms ease 1, shakePadding 400ms ease 100ms 1;
         }
       }
     }
