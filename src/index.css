@@ -1,0 +1,15 @@
+* {
+  font-family: 'Oxygen', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0 10em;
+  /* background: url(/src/assets/background.jpg); */
+  background-position: top left;
+  background-size: cover;
+}
