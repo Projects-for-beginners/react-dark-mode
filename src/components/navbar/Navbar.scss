@@ -5,16 +5,19 @@ nav {
   left: 0;
   width: calc(100% - var(--padding) * 2);
   height: 10.4em;
-  background-color: transparent;
+  background-color: var(--navbar-background);
+  box-shadow: var(--navbar-boxshadow);
   display: flex;
   align-items: center;
   padding: 0 var(--padding);
+  z-index: 1000;
+  transition: all 300ms;
 
   .logo {
     display: flex;
     align-items: center;
     
-    svg {
+    img {
       --w: 3em;
       display: inline-flex;
       width: var(--w);

@@ -68,8 +68,8 @@ input {
     p {
       max-width: 35ch;
       font-size: 1.6rem;
-      font-weight: bold;
       color: #aaa;
+      margin-top: 1.3em;
     }
   }
 
@@ -141,15 +141,16 @@ input {
 .actions {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 18em;
+  margin-top: 17em;
   margin-left: 12em;
   grid-gap: 6rem;
 
   & > div:first-child {
     font-size: 1.9rem;
-    font-weight: bold;
     color: #777;
     text-transform: capitalize;
+    padding-left: 6.2em;
+    width: 28em;
 
     strong {
       color: black;
@@ -160,28 +161,98 @@ input {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #fffaf4;
-    padding: 8em;
-    opacity: .3;
-    grid-gap: 2rem;
+    padding: 6em 0 5em 8em;
+    grid-gap: 3rem;
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22em;
+      height: calc(100% + 23em);
+      bottom: 0;
+      left: -22em;
+      border-top-right-radius: 16em;
+      background: linear-gradient(-47deg, #febea4, #e4b7a4, #febea2);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -10em;
+      height: 100%;
+      width: 10em;
+      background-color: #fffaf4;
+      border-top-right-radius: 1000px;
+    }
 
     .card {
+      --transition-time: 400ms;
       font-size: 1.7rem;
-      padding: 0 2em;
+      padding: 2em;
+      border-radius: 1em;
+      background-color: white;
+      transform-style: preserve-3d;
+      transition: all var(--transition-time);
+      cursor: pointer;
+
+      &:hover {
+        transform: perspective(24em)
+        rotate3d(1, 0, 0, 35deg)
+        rotate3d(0, 1, 0, 21deg)
+        rotate3d(0, 0, 1, -10deg);
+        box-shadow: -20px 61px 33px rgba(0, 0, 0, 0.2);
+
+        div {
+          box-shadow: 0px .5em 16px rgba(0, 0, 0, 0.2);
+        }
+
+        span, h3 {
+          text-shadow: 0px .5em 16px rgba(0, 0, 0, 0.2);
+        }
+      }
       
       .icon-container {
-        color: inherit;
+        width: 2.3em;
+        height: 2.3em;
+        border-radius: 34%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all var(--transition-time);
+
+        &#icon1 {
+          background-color: #fde78f;
+        }
+
+        &#icon2 {
+          background-color: #ff6576;
+        }
+
+        &#icon3 {
+          background-color: #72abef;
+        }
       
         img { 
-          color: inherit;
+          width: 1em;
+          height: 1em;
+          fill: white;
         }
       }
 
       h3 {
-        color: inherit;
+        font-weight: bold;
+        font-size: 1.7rem;
+        margin-top: 1.5em;
+        margin-bottom: .5em;
+        transition: all var(--transition-time);
       }
 
       span {
-        color: inherit;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: all var(--transition-time);
       }
     }
   }

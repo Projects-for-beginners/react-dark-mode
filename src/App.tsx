@@ -40,22 +40,22 @@ export default function App() {
         </div>
         <div className="card-container">
           <div className="card">
-            <div className="icon-container">
-              <img src="/src/asset/icon1.svg" alt="" />
+            <div className="icon-container" id="icon1">
+              <img src="/src/assets/icon1.svg" alt="" />
             </div>
             <h3>Choose your</h3>
             <span>Sports betting, lottery and bingo playing for the fun.</span>
           </div>
           <div className="card">
-            <div className="icon-container">
-              <img src="/src/asset/icon2.svg" alt="" />
+            <div className="icon-container" id="icon2">
+              <img src="/src/assets/icon2.svg" alt="" />
             </div>
             <h3>Edit and change</h3>
             <span>The Myspace page defines the individual.</span>
           </div>
           <div className="card">
-            <div className="icon-container">
-              <img src="/src/asset/icon3.svg" alt="" />
+            <div className="icon-container" id="icon3">
+              <img src="/src/assets/icon3.svg" alt="" />
             </div>
             <h3>Download your</h3>
             <span>Personal choices and the overall personality of the person.</span>
