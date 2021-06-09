@@ -26,7 +26,7 @@ class Navbar extends React.Component {
     return (
       <nav>
         <div className="logo">
-          <img src="/src/assets/logo.svg" alt="" />
+          <img src="./src/assets/logo.svg" alt="" />
           <span className="content"> Theme Switcher </span>
         </div>
         <ul>
