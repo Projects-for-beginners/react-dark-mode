@@ -1,6 +1,13 @@
 :root {
   --navbar-background: transparent;
   --navbar-boxshadow: 0px 0px 0px transparent;
+  --navbar-bborder: #ff8b89;
+  --navbar-bcolor: black;
+  --navbar-bhcolor: white;
+  --navbar-bg1: #e29283;
+  --navbar-bg2: #e55a5a;
+  --shadow-blur: #e55a5a88;
+  --cat-angle: 250deg;
 }
 
 * {

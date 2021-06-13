@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.scss';
+import themeKeys from '../../App';
 
 class Navbar extends React.Component {
   componentDidMount() {

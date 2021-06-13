@@ -3,11 +3,44 @@ import './App.scss';
 import Navbar from './components/navbar/Navbar';
 import classNames from 'classnames';
 
+export const themeKeys: any = {
+  "light": {
+    "--navbar-background": [ "white" ],
+    "--navbar-boxshadow": [ "0px 3px 12px rgba(0, 0, 0, 0.3)" ],
+  },
+  "dark": {
+    "--navbar-background": [ "white" ],
+    "--navbar-boxshadow": [ "0px 3px 12px rgba(0, 0, 0, 0.3)" ],
+  },
+  "common": {
+    "--navbar-bborder": [ "#ff8b89", "#0d97ca", "#4f930b" ],
+    "--navbar-bcolor": [ "black" ],
+    "--navbar-bhcolor": [ "white" ],
+    "--navbar-bg1": [ "#e29283", "#7bcaf2", "#7fe463" ],
+    "--navbar-bg2": [ "#e55a5a", "#00a3e1", "#1a8e0f" ],
+    "--shadow-blur": [ "#e55a5a88", "#00a3e188", "#49c93787" ],
+    "--cat-angle": [ "250deg", "170deg", "50deg" ],
+  }
+};
+
+export let themeName = 'light';
+
 export default function App() {
   const imgs = [1, 2, 3].map(i => `src/assets/img${i}.jpg`);
   const [idx, setIdx] = useState(0);
-  const [img, setImg] = useState(imgs[ idx ]);
-  const handleClick = (i: number) => () => { setIdx(i); setImg(imgs[i]) };
+  const [img, setImg] = useState(imgs[0]);
+  const handleClick = (i: number) => () => {
+    setIdx(i);
+    setImg(imgs[i]);
+
+    let keys: string[] = Object.keys(themeKeys.common);
+
+    for (let j = 0; j < keys.length; j += 1) {
+      let list = themeKeys.common[ keys[j] ];
+      let len = list.length;
+      document.documentElement.style.setProperty( keys[j], list[ i % len ] );
+    }
+  };
 
   return (
     <>
