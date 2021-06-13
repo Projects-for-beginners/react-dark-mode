@@ -103,7 +103,7 @@ input {
         }
         
         &.active {
-          box-shadow: -12px 18px 22px #e55a5a88;
+          box-shadow: -12px 18px 22px var(--shadow-blur);
         }
       }
 
@@ -112,11 +112,12 @@ input {
         font-weight: bold;
         color: white;
         border: none;
-        background-color: #e55a5a;
+        background-color: var(--navbar-bg2);
         padding: 1em 4em;
         border-radius: 13px;
         margin-left: auto;
         cursor: pointer;
+        transition: all 500ms;
 
         &:hover {
           animation: shakeMargin 350ms ease 1, shakePadding 400ms ease 100ms 1;
@@ -132,7 +133,8 @@ input {
         border-radius: 40px;
         height: 24em;
         object-fit: cover;
-        filter: hue-rotate(220deg);
+        filter: hue-rotate(var(--cat-angle));
+        transition: all 500ms;
       }
     }
   }

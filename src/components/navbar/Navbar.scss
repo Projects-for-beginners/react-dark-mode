@@ -54,19 +54,19 @@ nav {
       }
 
       &.button {
-        border: 1px solid #ff8b89;
+        border: 1px solid var(--navbar-bborder);
         padding: .9em;
         border-radius: 5px;
         text-transform: initial;
         position: relative;
-        color: black;
+        color: var(--navbar-bcolor);
         font-weight: bold;
         margin-left: .5em;
         width: 8ch;
         text-align: center;
 
         &:hover {
-          color: white;
+          color: var(--navbar-bhcolor);
 
           &::before {
             opacity: 1;
@@ -75,7 +75,7 @@ nav {
 
         &::before {
           content: "";
-          background: linear-gradient(135deg, #e29283, #e55a5a);
+          background: linear-gradient(135deg, var(--navbar-bg1), var(--navbar-bg2));
           position: absolute;
           top: 0;
           left: 0;
